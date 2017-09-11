@@ -19,7 +19,7 @@ cp eap-licenses-generator/target/licenses/* \
 for f in $(grep '.filename' products/${dir}/licenses/licenses.html | \
  grep -o 'href=".*"' | sed 's/href="//' | sed 's/"//')
 do
-    cp "eap-licenses-generator/src/main/resources/licenses/${f}" \
+    cp "licenses/txt/${f}" \
         products/${dir}/licenses/
 done
 done
